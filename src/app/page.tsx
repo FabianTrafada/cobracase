@@ -2,19 +2,12 @@
 
 import { Check, Star } from "lucide-react";
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import RandomNumber from "@/components/RandomUser";
 import Phone from "@/components/Phone";
+import { Icons } from "@/components/Icons";
+import { Reviews } from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -69,7 +62,7 @@ export default function Home() {
                   />
                   <img
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
-                    src="/users/user-3.png"
+                    src="/users/user-aca.jpg"
                     alt="user image"
                   />
                   <img
@@ -114,10 +107,96 @@ export default function Home() {
                 src="/line.png"
                 className="absolute w-20 -left-6 -bottom-6 select-none"
               />
-              <Phone className="w-64" imgSrc="/testimonials/1.jpg"/>
+              <Phone className="w-64" imgSrc="/testimonials/1.jpg" />
             </div>
           </div>
         </MaxWidthWrapper>
+      </section>
+
+      {/* value proposition section */}
+      <section className="bg-slate-100 py-24">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+          <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+            <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">
+              What our{" "}
+              <span className="relative px-2">
+                customers{" "}
+                <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-7 text-green-500" />
+              </span>{" "}
+              say
+            </h2>
+            <img src="/snake-2.png" className="w-24 order-0 lg:order-2" />
+          </div>
+
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16">
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="flex gap-0.5 mb-2">
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+              </div>
+              <div className="text-lg leading-8">
+                <p>
+                  "Saya sangat puas dengan custom case handphone ini! Desainnya
+                  <span className="p-0.5 bg-slate-800 text-white">{' '}unik{' '}</span>
+                  dan sesuai dengan keinginan saya. Kualitas materialnya juga
+                  sangat baik, terasa kokoh dan nyaman digenggam. Proses
+                  pemesanannya mudah dan pengirimannya cepat. Saya pasti akan
+                  merekomendasikannya kepada teman-teman saya. Terima kasih!"
+                </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <img
+                  className="rounded-full h-12 w-12 object-cover"
+                  src="/users/user-aca.jpg"
+                  alt="User image"
+                />
+                <div className="flex flex-col">
+                  <p className="font-semibold">Rasya Haidarulloh</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+                    <Check className="h-4 w-4 stroke-[3px] text-green-600"/>
+                    <p className="text-sm">Verified Purchase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="flex gap-0.5 mb-2">
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+                <Star className="w-5 h-5 text-green-600 fill-green-600" />
+              </div>
+              <div className="text-lg leading-8">
+                <p>
+                  "Aku seneng banget karo case handphone khusus iki! Desainé unik banget lan cocog karo kepenginanku. Kualitas materiale uga apik banget, keras lan nyaman ditingali. Proses pesenane gampang lan pengirimane cepet. Aku bakal rekomendasiin iki kanggo temen-temenku. Matur nuwun!"
+                </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <img
+                  className="rounded-full h-12 w-12 object-cover"
+                  src="/users/djiwo.jpg"
+                  alt="User image"
+                />
+                <div className="flex flex-col">
+                  <p className="font-semibold">Djiwo Adi Nugroho</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+                    <Check className="h-4 w-4 stroke-[3px] text-green-600"/>
+                    <p className="text-sm">Verified Purchase</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+
+        <div className="pt-16">
+          <Reviews />
+        </div>
       </section>
     </div>
   );
